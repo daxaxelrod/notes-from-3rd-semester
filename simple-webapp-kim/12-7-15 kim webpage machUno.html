@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Binghamton</title>
+  <!-- <link href="mathstyles.css" rel="stylesheet" type="text/css"/> -->
+
+  <style>
+
+  body {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #006F53;
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+<h1>Good Morning!</h1>
+<p>Welcome to Binghamton University</p>
+<p>Search our database for your evert</p>
+
+
+<br/>
+<div id="answer">
+  <h3>If I didn't screw up, listing should be below</h3>
+  <br/>
+
+
+  <h3>Have a great day</h3>
+</div>
+
+
+
+<form>
+  <label for="databaseInputstuff">Search!</label>
+  <input type="text" name="databaseInputstuff" id="search">
+  <button onclick="return FindDirections(document.getElementById('search').value)">woot woot</button>
+</form>
+
+<h1 id="yoloAnswer"></h1>
+<!-- <img src="Binghamton_Bearcats01.jpg" alt="Go Bearcats!!" style="
+  width: auto;
+  height: auto;
+" > -->
+<img src="bearcat.gif" alt="Go Bearcats!!" height=300 width=300 >
+<footer>
+  <h3>if you are  page admin or would just like to add you\'re event, <a href="admin/make_page.html">click this link</a></h3> 
+</footer>
+
+
+  <script>
+
+
+
+
+
+  // $(document).ready(
+   function FindDirections(n){
+      if (n == null || n == ""){
+        alert("dear visitor, you done goofed. enter something inteligible into the field please");
+        return false; }
+       function returnKims(){
+         return '<h1>Kim Jaussi\'s lecture</h1>'+
+                '<p>Looks like you\'re going to C4</p>'+
+                '<ol>' +
+                '<li>Take a left out of the traffic circle</li>'+
+                '<li>after you pass the speed bump, take a left and find a spot in the parking lot</li>'+
+                '<li>then go back up the hill and walk to the left</li>' +
+                '<li>finally walk to the building with the big C in front</li>' +
+                '<li>A student will be waiting for you</li>' +
+                '</ol>';
+
+       }
+       function returnDiscoveryCenter(){
+         return '<h1>Discovery Center! </h1>'+
+                '<p>Great place to print! Looks like you\'re going to C4</p>'+
+                '<ol>' +
+                '<li>Take a left out of the traffic circle</li>'+
+                '<li>after you pass the speed bump, take a left and find a spot in the parking lot</li>'+
+                '<li>then walk back up the hill and walk to the left</li>' +
+                '<li>finally walk to the building with the big C in front</li>' +
+                '<li>after you enter the buidling, enter the first door on your right</li>' +
+                '</ol>' +
+                '<h3>hopefully the line isnt too long</h3>';
+
+       }
+
+         function returnSOM(){
+           return '<h1>Looks like you\'re going to SOM! yay business</h1>'+
+                 '<ol>' +
+                 '<li>At the traffic circle, take the first right</li>' +
+                 '<li>Follow the road until you see a bus stop on your right</li>' +
+                 '<li>take the 2nd right at the swinging gate thing</li>' +
+                 '<li>walk down the hill to the sidewalk and start walking to the left</li>' +
+                 '<li>enjoy our beautiful school</li>' +
+                 "<li>continue walking until yo see a glass building. Enter said glass buildinga</li>" +
+                 '<li>arrive at SOM!</li>' +
+                 '<ol>';
+
+
+         }
+
+         function returnLectureHall(){
+           return '<h1>AHHHH Lecture hall. Good choice</h1>'+
+                 '<ol>' +
+                 '<li>At the traffic circle, take the first right</li>' +
+                 '<li>Follow the road until you see a bus stop on your right</li>' +
+                 '<li>take the 2nd right at the swinging gate thing and park</li>' +
+                 '<li>go down the little hill until you git the sidewalk</li>' +
+                 '<li>the large round building in front to your left is lecture hall!</li>' +
+                 '<ol>';
+
+         }
+
+         function returnMandela() {
+           return '<h1>Ahhh the mandela room is a bit tricky</h1>'+
+                 '<ol>' +
+                 '<li>Make a right at the traffic circle</li>' +
+                 '<li>Follow the road until you see a bus stop on your right</li>' +
+                 '<li>take the 2nd right at the swinging gate thing</li>' +
+                 '<li>walk out of the visitors lot and to the right</li>' +
+                 '<li>pass the library and head into the building in front of the buss pickup</li>' +
+                 '<li>walk down  the hallway and continue straight!</li>' +
+                 '<li>arrive in mandela room!</li>' +
+                 '<ol>';
+
+
+
+         }
+
+
+
+      // var answer = 0;
+      // var temp;
+      //
+      //
+      // for(var i = 1; i <= n; i++){
+      //     temp = 1/(Math.pow(i,(1 + 1/i)));
+      //     answer += temp;
+      //
+      // }
+      n = n.toLowerCase();
+      var arrayList = n.split(/\s+/);
+      var answer = "";
+      var temp = true;
+
+
+       for(var i = 0; i < n.length; i++){
+         if (arrayList[i] !== null){
+          console.log("passsed intial if");
+          console.log(arrayList[i]);
+
+        if(arrayList[i] == "kim"){
+              answer = returnKims();
+              temp = false;
+          }
+          if(arrayList[i] == "lead480"){
+              answer = returnKims();
+              temp = false;
+          }
+          if(arrayList[i] == "jaussi"){
+              answer = returnKims();
+              temp = false;
+          }
+          if(arrayList[i] == "innovation"){
+              answer = returnKims();
+              temp = false;
+          }
+          if(arrayList[i] == "SOM" || arrayList[i] == "som"){
+              answer = returnSOM();
+              temp = false;
+          }
+          if(arrayList[i] == "mandela"){
+              answer = retukim
+              rnMandela();
+              temp = false;
+          }
+          if(arrayList[i] == "lecture"){
+              answer =returnLectureHall();
+              temp = false;
+          }
+          if(arrayList[i] == "discovery"){
+              answer = returnDiscoveryCenter();
+              temp =false;
+          }
+
+
+
+        }
+
+
+      }
+
+      if(answer == ""){
+        answer = "<h2>Opps!! We dont have that entry just yet! google it! Or just pull up and ask the person at the info booth</h2>"
+      }
+
+      console.log(answer);
+
+      console.log(n);
+      document.getElementById('yoloAnswer').innerHTML = answer;
+      console.log("You passed the critcal point");
+
+      //lolz returning false fixes all my problems
+      return false;
+
+
+
+
+    }
+  //);
+
+
+  </script>
+
+</body>
