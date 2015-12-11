@@ -3,6 +3,24 @@
   <title>Make an Event</title>
   <link href='https://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
   <style>
+
+      #main-container  {
+          width: 65%;
+          margin: 0 auto;
+            background-color: #ffffff;
+              border-radius: 25%;
+              margin-bottom: 27px;
+
+
+      }
+      #lead480 {
+        width: 40%;
+        margin: 7px auto 7px;
+        background-color: #ffffff;
+        line-height: 10px;
+        border-radius: 25%;
+      }
+
     body {
       font-family: 'Rokkitt', serif;
       width: 100%;
@@ -12,38 +30,57 @@
       background-color: #006F53;
 
     }
+input {
+margin-top: 10px;
+}
 
-    #main-container {
-        width: 65%;
-          background-color: #ffffff;
+#larger {
+  line-height: 10px;
+  font-size: 2em;
 
-    }
+}
+#slightlyLarger {
+  font-size: 1.25em;
 
+}
   </style>
 </head>
 <body>
 
 <div id="main-container">
+  <br/>
 <h2>Add your event to our database</h2>
 
 <form class="newEvent" action="index.html" method="post">
 
   <label for="event">Event Name</label>
   <input name="event" type="texta"/></input>
-
+<br/>
 
   <label for="location">Location</label>
   <input name="location" type="text"/></input>
-
+<br/>
 
   <label for="name">Who's running it</label>
   <input name="name" type="text"/></input>
   <br/><br/><br/>
   <input type="submit"></submit>
 
-</form>
 
+
+</form>
+<br/>
 </div>
+
+<div id="lead480">
+  <br/>
+    <p1 id="larger">Go back to <br/><br/><a href="12-7-15 kim webpage machUno.html">searching!</a></p1>
+    <br/><br/><br/>
+    <p4 id="slightlyLarger">A project by Lead480</p4>
+  <br/><br/>
+</div>
+
+
 </body>
 
 
